@@ -1,0 +1,23 @@
+# ignore venv 
+/venv 
+
+# ignore DStore
+/.DS_Store
+/src/.DS_Store
+/src/buyablemain/.DS_Store
+/src/buyablemain/static/.DS_Store
+
+# ignore SQLite
+/src/buyablemain/db.sqlite3
+
+# ignore core pycache 
+/src/buyablemain/core/__pycache__
+
+# ignore migrations init 
+/src/buyablemain/core/__init__.py
+
+# ignore buyablemain pycache
+/src/buyablemain/buyablemain/__pycache__
+
+# ignore migrations pycache 
+/src/buyablemain/core/migrations/__pycache__

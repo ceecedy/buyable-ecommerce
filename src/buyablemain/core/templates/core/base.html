@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Use a CDN for Feather Icons -->
+        <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+        <!-- Google Font for better typography -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        {% load static %}
+    </head>
+    <body class="font-sans">
+        <nav class="border-b border-gray-300">
+            <div class="max-w-6xl mx-auto py-2 px-6 xl:px-0 flex justify-between items-center">
+                <div class="menu-left flex items-center space-x-6">
+                    <!-- Logo as a clickable link to homepage -->
+                    <a href="{% url 'frontpage' %}" class="flex items-center">
+                        <img src="{% static 'core-images/buyable-logo-updated.png' %}" alt="Buyable" class="w-24 h-auto"> 
+                    </a>                    
+                    <!-- Navigation links -->
+                    <ul class="flex items-center space-x-6">
+                        <li>
+                            <a href="#" class="text-gray-800 font-semibold text-lg hover:text-orange-600 transition-colors">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-800 font-semibold text-lg hover:text-orange-600 transition-colors">Sample 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-800 font-semibold text-lg hover:text-orange-600 transition-colors">Sample 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-800 font-semibold text-lg hover:text-orange-600 transition-colors">Sample 3</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-right flex items-center space-x-4">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                          </svg>                          
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>                                        
+                    </a>
+                </div>
+        
+            </div>
+        </nav>
+
+        <main>
+            {% block content %}     
+
+            {% endblock %}     
+        </main>
+        <!-- Footer -->
+        <footer class="bg-gray-50 w-full">
+            <div class="max-w-6xl mx-auto py-12 px-6 xl:px-0 md:flex justify-between items-center">
+                <!-- About Us Section -->
+                <div class="footer-left mb-12 md:mb-0 w-full md:w-1/2">
+                    <h2 class="mb-5 uppercase text-lg font-semibold text-gray-800">ABOUT US</h2>
+                    <p class="text-gray-600 text-sm">To be fixed later I guess...</p>
+                </div>
+
+                <!-- Socials Section -->
+                <div class="footer-right">
+                    <!-- Social Icons -->
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800 flex flex-col items-center">
+                            <i data-feather="facebook" class="w-6 h-6 mb-2"></i>
+                            <span class="text-sm">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="text-pink-600 hover:text-pink-800 flex flex-col items-center">
+                            <i data-feather="instagram" class="w-6 h-6 mb-2"></i>
+                            <span class="text-sm">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" class="text-blue-700 hover:text-blue-900 flex flex-col items-center">
+                            <i data-feather="linkedin" class="w-6 h-6 mb-2"></i>
+                            <span class="text-sm">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Initialize Feather Icons -->
+        <script>
+            feather.replace();
+        </script>
+    </body>
+</html>
