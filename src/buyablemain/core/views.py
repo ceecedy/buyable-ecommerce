@@ -4,11 +4,16 @@ from django.shortcuts import render
 # products and category imports 
 from product.models import Products
  
-
-# Create your views here.
-# testing the frontpage 
-def test_frontpage(request):
+# the frontpage view
+def home_frontpage(request):
     # ORM - access all the values. 
-    products = Products.objects.all()[0:7]
+    products = Products.objects.all()
     
     return render(request, 'core/frontpage.html', {'products':products})
+
+# the shop view 
+def shopping(request):
+    # ORM - access all the values. 
+    products = Products.objects.all()
+    
+    return render(request, 'core/shopping.html', {'products':products})
