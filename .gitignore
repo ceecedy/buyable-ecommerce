@@ -1,6 +1,9 @@
 # ignore venv 
 /venv 
 
+# ignore notes 
+/notes.txt
+
 # ignore DStore
 /.DS_Store
 /src/.DS_Store
@@ -13,11 +16,12 @@
 # ignore core pycache 
 /src/buyablemain/core/__pycache__
 
-# ignore migrations init 
-/src/buyablemain/core/__init__.py
-
 # ignore buyablemain pycache
 /src/buyablemain/buyablemain/__pycache__
 
-# ignore migrations pycache 
+# ignore core migrations pycache 
 /src/buyablemain/core/migrations/__pycache__
+
+# ignore product pycache and its migrations pycache 
+/src/buyablemain/product/__pycache__
+/src/buyablemain/product/migrations/__pycache__
