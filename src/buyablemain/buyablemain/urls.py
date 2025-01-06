@@ -21,6 +21,8 @@ from django.urls import path
 from core.views import *
 # product urls
 from product.views import *
+# cart urls 
+from carts.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +33,7 @@ urlpatterns = [
     
     # product
     path('product/<slug:slug>/', specific_product, name='spec_product'),
+    
+    # carts
+    path('cart/<int:product_id>/', add_to_cart, name='add_cart'),
 ]
