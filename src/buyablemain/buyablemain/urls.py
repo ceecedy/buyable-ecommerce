@@ -30,5 +30,5 @@ urlpatterns = [
     path('shop/', shopping, name='shop'),
     
     # product
-    path('product/', specific_product, name='spec_product'),
+    path('product/<slug:slug>/', specific_product, name='spec_product'),
 ]
