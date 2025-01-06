@@ -30,3 +30,8 @@ class Products(models.Model):
         
     def __str__(self):
         return self.name
+
+    # function to show the price of the item 
+    def get_price(self):
+        return self.price 
+        
